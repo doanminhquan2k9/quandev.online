@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quốc Vinh – Bio</title>
+    <meta name="description" content="Website cá nhân" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav>
+        <div class="container nav-wrap">
+            <div class="brand">Quốc Vinh</div>
+            <div class="tabs">
+                <a href="#home" class="nav-link active" data-tab="home">Home</a>
+                <a href="#about" class="nav-link" data-tab="about">About</a>
+                <a href="#contact" class="nav-link" data-tab="contact">Contact</a>
+                <a href="#bank" class="nav-link" data-tab="bank">Bank</a>
+            </div>
+            <div class="nav-ops">
+                <button id="themeToggle" class="icon-btn" title="Đổi giao diện (T/L)">
+                    <span id="themeIcon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero container" id="homeSection">
+        <div class="avatar-wrap">
+            <img class="avatar" src="https://drive.google.com/thumbnail?id=1oPeKvVP9CCxuZG85r-PQZEg4audnfJXi&sz=w512" alt="Avatar">
+        </div>
+        <div>
+            <p class="intro-top">Hi, I am</p>
+            <h1 class="name">Quốc Vinh</h1>
+            <p class="role">and I'm a <span class="role-typing" id="roleTyping"></span></p>
+
+
+            <!-- GIỮ NGUYÊN NÚT ẢNH; đã khử nền trắng đằng sau bằng CSS -->
+            <nav class="apps">
+                <a class="app" href="https://www.facebook.com/hihiskibiditolet" target="_blank" aria-label="Facebook">
+                    <img src="https://drive.google.com/thumbnail?id=1GyFIn_AHnnwged5TUYWByn82fwH71zaD&sz=w512" alt="Facebook">
+                </a>
+                <a class="app" href="https://www.tiktok.com/@skidibitolett" target="_blank" aria-label="YouTube">
+                    <img src="https://drive.google.com/thumbnail?id=1bxTyBhn1OOeirx7y8pww03r9uFDW0sWC&sz=w1024
+" alt="YouTube">
+                </a>
+                <a class="app" href="https://zalo.me/84876642499" target="_blank" aria-label="Zalo">
+                    <img src="https://drive.google.com/thumbnail?id=10k_hsqbhsK8vA057Y9YW2YEjJ6Qe58RZ&sz=w512" alt="Zalo">
+                </a>
+                <a class="app" href="https://t.me/hihiskibidii" target="_blank" aria-label="Telegram">
+                    <img src="https://drive.google.com/thumbnail?id=1rYOtVx1ec2D-RIWepQkDwjNu_3ICUH81&sz=w512" alt="Telegram">
+                </a>
+                <a class="app" href="https://www.instagram.com/qv.devmxh?igsh=MWRkZmYwbHg4YXhudg==" target="_blank" aria-label="Instagram">
+                    <img src="https://drive.google.com/thumbnail?id=1TQy64N1CZZOEX_NbZ_I9rVCgbsY9TRzY&sz=w512" alt="Instagram">
+                </a>
+            </nav>
+
+            <span class="pill brand" id="visitChip">Đang tải…</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- TAB: HOME -->
+        <div class="tab-content" id="tab-home">
+            <!-- THÔNG BÁO (đặt lên đầu) -->
+            <section class="card warning" id="warningCard" aria-live="polite">
+                <h2 class="warn-title">THÔNG BÁO</h2>
+                <h4 class="warn-sub">Đây là bảng giá dịch vụ bên mình mn xem tham khảo nhé</h4>
+                <ul class="warn-list">
+                    <li>☞ Mình Có Bán acc Liên Quân & Free Fire và 1 số game khác</li>
+                    <li>☞ Acc game còn tại shop
+                        <a class="warn-link" href=" https://khoaccgame.netlify.app/" target="_blank" rel="noopener">📎 Xem tại đây</a>
+                    </li>
+                    <li>☞ Acc tik tok còn tại shop
+                        <a class="warn-link" href=" https://khonicktiktok.netlify.app/" target="_blank" rel="noopener">📎 Xem tại đây</a>
+                    </li>
+                    <li>☞ Bảng giá dịch vụ Tik Tok
+                        <a class="warn-link" href="https://anotepad.com/notes/c7ik554c" target="_blank" rel="noopener">📎 Xem tại đây</a>
+                    </li>
+                    <li>☞ Bảng giá dịch vụ Facebook
+                        <a class="warn-link" href="https://anotepad.com/notes/xexyke56" target="_blank" rel="noopener">📎 Xem tại đây</a>
+                    </li>
+                    <li>☞ Bảng giá nạp xu Tik Tok
+                        <a class="warn-link" href="https://anotepad.com/notes/rnkkkywb" target="_blank" rel="noopener">📎 Xem tại đây</a>
+                    </li>
+                    <li>☞ Bảng giá dịch vụ Instagram
+                        <a class="warn-link" href="https://anotepad.com/notes/9xeg4wcy" target="_blank" rel="noopener">📎 Xem tại đây</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline" id="btnGotIt" title="Đã hiểu">Đã hiểu</button>
+            </section>
+
+            <!-- Skills -->
+            <section class="card" id="skills">
+                <h3 style="text-align:center">Kỹ Năng Lập Trình</h3>
+                <div class="skills">
+                    <div>
+                        <div style="display:flex;justify-content:space-between"><b>HTML/CSS</b><span>80%</span></div>
+                        <div class="bar"><i data-pct="80"></i></div>
+                    </div>
+                    <div>
+                        <div style="display:flex;justify-content:space-between"><b>Javascript</b><span>55%</span></div>
+                        <div class="bar"><i data-pct="55" data-g="blue"></i></div>
+                    </div>
+                    <div>
+                        <div style="display:flex;justify-content:space-between"><b>PHP</b><span>35%</span></div>
+                        <div class="bar"><i data-pct="35" data-g="purple"></i></div>
+                    </div>
+                    <div>
+                        <div style="display:flex;justify-content:space-between"><b>MySQL</b><span>28%</span></div>
+                        <div class="bar"><i data-pct="28" data-g="amber"></i></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- TAB: ABOUT -->
+        <div class="tab-content" id="tab-about" style="display:none">
+            <section class="section-wrap">
+                <h2 class="section-title">About</h2>
+                <div class="grid-2">
+                    <div class="info-card">
+                        <h3 style="margin:0 0 6px">Về tôi</h3>
+                        <p class="muted" style="margin:6px 0 10px">Mình là Quốc Vinh – dev/creator chuyên cung cấp dịch vụ mạng xã hội, viết code tool, thiết kế web mini, bán acc game & CapCut Pro. Cam kết mang đến giải pháp: <b>nhanh chóng</b>, <b>uy tín</b>, <b>bảo mật</b>.</p>
+                        <div class="item-meta">
+                            <span class="pill brand">Mạng Xã Hội</span>
+                            <span class="pill brand">Code Wed,Tool</span>
+                            <span class="pill brand">Tài Khoản Game</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h3 style="margin:0 0 6px">Kinh nghiệm nổi bật</h3>
+                        <ul style="margin:6px 0 0 18px;line-height:1.8">
+                            <li>Trên 3 năm kinh nghiệm cung cấp dịch vụ mạng xã hội và phát triển công cụ tự động hóa.</li>
+                            <li>Thực hiện nhiều dự án web mini, tối ưu giao diện và trải nghiệm người dùng.</li>
+                            <li>Kinh nghiệm dày dặn trong lĩnh vực bán tài khoản game và tài khoản TikTok.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card" style="margin-top:16px">
+                    <h3 style="margin:0 0 6px">Dịch vụ</h3>
+                    <div class="item-meta">
+                        <span class="pill">Tài khoản game</span>
+                        <span class="pill">Mạng xã hội</span>
+                        <span class="pill">Công cụ tự động hoá</span>
+                        <span class="pill">Thiết kế wed mini</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- TAB: CONTACT -->
+        <div class="tab-content" id="tab-contact" style="display:none">
+            <section class="section-wrap">
+                <h2 class="section-title">Contact</h2>
+                <div class="grid-2">
+                    <div class="info-card">
+                        <h3 style="margin:0 0 10px">Kênh liên hệ nhanh</h3>
+                        <div style="display:grid;gap:10px">
+                            <a class="btn" href="https://zalo.me/84876642499" target="_blank">Zalo: 84876642499</a>
+                            <a class="btn btn-outline" href="https://www.facebook.com/hihiskibiditolet" target="_blank">Facebook: Quốc Vinh</a>
+                            <a class="btn btn-outline" href="https://www.tiktok.com/@skidibitolett" target="_blank">Tiktok: @skidibitolett</a>
+                            <button class="btn" type="button" data-copy="avinhdongthap222@gmail.com">Copy Email</button>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h3 style="margin:0 0 10px">Gửi yêu cầu</h3>
+                        <form id="contactForm">
+                            <label style="display:grid;gap:6px;margin:8px 0">
+                                <span>Họ tên</span>
+                                <input class="input" type="text" name="name" placeholder="Tên của bạn" required>
+                            </label>
+                            <label style="display:grid;gap:6px;margin:8px 0">
+                                <span>Email</span>
+                                <input class="input" type="email" name="email" placeholder="you@example.com" required>
+                            </label>
+                            <label style="display:grid;gap:6px;margin:8px 0">
+                                <span>Nội dung</span>
+                                <textarea class="textarea" name="message" placeholder="Bạn cần gì?" required></textarea>
+                            </label>
+                            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+                                <button class="btn" type="submit">Gửi qua Email</button>
+                                <button class="btn btn-outline" type="button" id="openZalo">Mở Zalo Chat</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- TAB: BANK -->
+        <div class="tab-content" id="tab-bank" style="display:none">
+            <section class="section-wrap">
+                <h2 class="section-title">Bank</h2>
+                <div class="grid-2">
+                    <div class="bank-card">
+                        <div class="bank-logo">MB</div>
+                        <div>
+                            <div style="font-weight:800">MB Bank</div>
+                            <div class="bank-meta">CTK: THAI QUOC VINH</div>
+                            <div style="margin-top:6px;font-weight:700">STK: <span id="acc-mb">0336567489</span></div>
+                            <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+                                <button class="btn btn-outline copy-btn" data-copy="#acc-mb">Copy STK</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bank-card">
+                        <div class="bank-logo">VCB</div>
+                        <div>
+                            <div style="font-weight:800">Vietcombank</div>
+                            <div class="bank-meta">CTK: THAI QUOC VINH</div>
+                            <div style="margin-top:6px;font-weight:700">STK: <span id="acc-vcb">1046099539</span></div>
+                            <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+                                <button class="btn btn-outline copy-btn" data-copy="#acc-vcb">Copy STK</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bank-card">
+                        <div class="bank-logo">MM</div>
+                        <div>
+                            <div style="font-weight:800">Momo</div>
+                            <div class="bank-meta">CTK: THAI QUOC VINH</div>
+                            <div style="margin-top:6px;font-weight:700">SĐT: <span id="acc-momo">0336567489</span></div>
+                            <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+                                <button class="btn btn-outline copy-btn" data-copy="#acc-momo">Copy SĐT</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="muted" style="margin-top:8px">Vui lòng ghi rõ nội dung chuyển khoản: <b>"Tên + dịch vụ"</b></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="container footer">
+        <p>© <span id="year"></span> Quốc Vinh • Made with ❤️</p>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="to-top" id="toTop" title="Lên đầu trang">▲</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
