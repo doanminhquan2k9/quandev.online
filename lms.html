@@ -223,6 +223,91 @@
             font-size: 1.2rem;
         }
 
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 1rem;
+            width: 90%;
+            max-width: 400px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #777;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+            outline: none;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .error-message {
+            color: var(--danger);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -232,6 +317,17 @@
             from { 
                 opacity: 0;
                 transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes modalFadeIn {
+            from { 
+                opacity: 0;
+                transform: translateY(-20px);
             }
             to { 
                 opacity: 1;
@@ -325,7 +421,7 @@
                 </div>
                 <p class="card-description">
                     Bảng điều khiển quản trị với đầy đủ chức năng quản lý hệ thống.
-                    Phiên bản này không khả dụng cho người dùng thông thường.
+                    Yêu cầu mật khẩu để truy cập.
                 </p>
                 <div class="card-meta">
                     <div class="meta-item">
@@ -337,9 +433,9 @@
                         <span>Cập nhật: 10/06/2023</span>
                     </div>
                 </div>
-                <button class="btn btn-secondary" disabled>
+                <button class="btn btn-secondary" id="requestAdminBtn">
                     <i class="fas fa-lock"></i>
-                    Chỉ Dành Cho Admin
+                    Yêu Cầu Quyền Truy Cập
                 </button>
             </div>
         </div>
@@ -350,8 +446,97 @@
         </div>
     </div>
 
+    <!-- Password Modal -->
+    <div class="modal" id="passwordModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Xác Thực Quyền Admin</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="passwordForm">
+                <div class="form-group">
+                    <label for="adminPassword">Nhập Mật Khẩu Admin</label>
+                    <input type="password" id="adminPassword" placeholder="Nhập mật khẩu" required>
+                    <div class="error-message" id="passwordError">Mật khẩu không chính xác!</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-modal">Hủy</button>
+                    <button type="submit" class="btn btn-primary">Xác Nhận</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Xác Thực Thành Công</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+                <p>Bạn đã được cấp quyền truy cập tải xuống bảng điều khiển admin.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="https://drive.google.com/file/d/1a7vAr55sGA_FAkVQTqw0r6dyJWOuYj-Y/view?usp=sharing" class="btn btn-primary" id="downloadAdminBtn">
+                    <i class="fas fa-download"></i>
+                    Tải Xuống Ngay
+                </a>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Tìm kiếm phần mềm
+        // DOM Elements
+        const requestAdminBtn = document.getElementById('requestAdminBtn');
+        const passwordModal = document.getElementById('passwordModal');
+        const successModal = document.getElementById('successModal');
+        const closeModalBtns = document.querySelectorAll('.close-modal');
+        const passwordForm = document.getElementById('passwordForm');
+        const passwordError = document.getElementById('passwordError');
+        const adminPasswordInput = document.getElementById('adminPassword');
+
+        // Show password modal
+        requestAdminBtn.addEventListener('click', () => {
+            passwordModal.style.display = 'flex';
+        });
+
+        // Close modals
+        closeModalBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                passwordModal.style.display = 'none';
+                successModal.style.display = 'none';
+                passwordError.style.display = 'none';
+                adminPasswordInput.value = '';
+            });
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === passwordModal || e.target === successModal) {
+                passwordModal.style.display = 'none';
+                successModal.style.display = 'none';
+                passwordError.style.display = 'none';
+                adminPasswordInput.value = '';
+            }
+        });
+
+        // Password validation
+        passwordForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const password = adminPasswordInput.value;
+            
+            if (password === '123') {
+                passwordModal.style.display = 'none';
+                successModal.style.display = 'flex';
+                passwordError.style.display = 'none';
+                adminPasswordInput.value = '';
+            } else {
+                passwordError.style.display = 'block';
+            }
+        });
+
+        // Search functionality
         const searchInput = document.querySelector('.search-bar input');
         const downloadCards = document.querySelectorAll('.download-card');
 
@@ -370,12 +555,10 @@
             });
         });
 
-        // Theo dõi lượt tải xuống
-        document.querySelectorAll('.btn-primary:not([disabled])').forEach(btn => {
+        // Track downloads
+        document.querySelectorAll('.btn-primary:not(#downloadAdminBtn)').forEach(btn => {
             btn.addEventListener('click', (e) => {
-                if (!e.target.href.includes('admin')) {
-                    console.log('Đã bắt đầu tải xuống:', e.target.closest('.download-card').querySelector('.card-title').textContent);
-                }
+                console.log('Đã bắt đầu tải xuống:', e.target.closest('.download-card').querySelector('.card-title').textContent);
             });
         });
     </script>
