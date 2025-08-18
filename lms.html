@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSphere Pro | Trang Tải Xuống</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --accent: #fd79a8;
+            --success: #00b894;
+            --warning: #fdcb6e;
+            --danger: #d63031;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .download-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .download-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .download-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .card-badge {
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .card-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #777;
+        }
+
+        .meta-item i {
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .search-bar {
+            display: flex;
+            margin-bottom: 2rem;
+            position: relative;
+            max-width: 400px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 0.8rem 1.5rem 0.8rem 3rem;
+            border-radius: 2rem;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+        }
+
+        .password-note {
+            background-color: rgba(0, 184, 148, 0.1);
+            color: var(--success);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .password-note i {
+            font-size: 1.2rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .download-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <h1>TechSphere Pro</h1>
+            </div>
+        </header>
+
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Tìm kiếm phần mềm...">
+        </div>
+
+        <div class="download-section">
+            <div class="download-card">
+                <div class="card-header">
+                    <h3 class="card-title">Công Cụ Lấy Mã Máy</h3>
+                    <span class="card-badge">v2.4.5</span>
+                </div>
+                <p class="card-description">
+                    Công cụ tạo mã máy duy nhất để xác thực thiết bị và bản quyền.
+                    Phiên bản này bao gồm các tính năng bảo mật nâng cao và cải thiện hiệu suất.
+                </p>
+                <div class="card-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-download"></i>
+                        <span>1.2MB</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Cập nhật: 15/06/2023</span>
+                    </div>
+                </div>
+                <a href="https://drive.google.com/file/d/1OwlHjSIKNtg15pV3A1PdIUl6RccT4hgJ/view?usp=sharing" class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    Tải Xuống Ngay
+                </a>
+            </div>
+
+            <div class="download-card">
+                <div class="card-header">
+                    <h3 class="card-title">Phần Mềm TechSphere Pro</h3>
+                    <span class="card-badge">v3.8.1</span>
+                </div>
+                <p class="card-description">
+                    Bộ phần mềm đầy đủ tính năng. Phiên bản 3.8.1 bao gồm
+                    sửa lỗi, cải thiện hiệu suất và các công cụ năng suất mới.
+                </p>
+                <div class="card-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-download"></i>
+                        <span>48.7MB</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Cập nhật: 28/05/2023</span>
+                    </div>
+                </div>
+                <a href="https://drive.google.com/file/d/1BqjoKVTzk9QWE6U_mrxfmiIIOaTP2iEt/view?usp=sharing" class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    Tải Xuống Ngay
+                </a>
+            </div>
+
+            <div class="download-card">
+                <div class="card-header">
+                    <h3 class="card-title">Bảng Điều Khiển Admin</h3>
+                    <span class="card-badge">v1.0.3</span>
+                </div>
+                <p class="card-description">
+                    Bảng điều khiển quản trị với đầy đủ chức năng quản lý hệ thống.
+                    Phiên bản này không khả dụng cho người dùng thông thường.
+                </p>
+                <div class="card-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-download"></i>
+                        <span>22.4MB</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Cập nhật: 10/06/2023</span>
+                    </div>
+                </div>
+                <button class="btn btn-secondary" disabled>
+                    <i class="fas fa-lock"></i>
+                    Chỉ Dành Cho Admin
+                </button>
+            </div>
+        </div>
+
+        <div class="password-note">
+            <i class="fas fa-key"></i>
+            <span>Lưu ý: Mật khẩu mặc định cho file ZIP là "1"</span>
+        </div>
+    </div>
+
+    <script>
+        // Tìm kiếm phần mềm
+        const searchInput = document.querySelector('.search-bar input');
+        const downloadCards = document.querySelectorAll('.download-card');
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            downloadCards.forEach(card => {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const description = card.querySelector('.card-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Theo dõi lượt tải xuống
+        document.querySelectorAll('.btn-primary:not([disabled])').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                if (!e.target.href.includes('admin')) {
+                    console.log('Đã bắt đầu tải xuống:', e.target.closest('.download-card').querySelector('.card-title').textContent);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
