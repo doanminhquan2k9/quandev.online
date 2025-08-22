@@ -1,1 +1,135 @@
-function _0x4c21(_0x4774ba,_0x372f9c){const _0x5a4a1b=_0x5a4a();return _0x4c21=function(_0x4c21d6,_0x1f44b2){_0x4c21d6=_0x4c21d6-0x177;let _0x90b85c=_0x5a4a1b[_0x4c21d6];return _0x90b85c;},_0x4c21(_0x4774ba,_0x372f9c);}function _0x5a4a(){const _0x2c166=['\x20<span\x20style=\x22font-size:\x2020px;\x20font-weight:\x20500;\x20color:\x20#9ca3af;\x22>điểm</span></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','5px\x2010px','#d1d5db','\x22Courier\x20New\x22,\x20Courier,\x20monospace','99999','status','\x27Inter\x27,\x20\x27Segoe\x20UI\x27,\x20\x27Roboto\x27,\x20sans-serif','open','20px','getElementById','contains','5oIEcaU','string','🎉\x20[Minh\x20Quân\x20Dev]\x20Tìm\x20thấy\x20điểm\x20:\x20','style','rgba(0,\x200,\x200,\x200.7)','log','includes','#00ff7f','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20align-items:\x20start;\x20gap:\x2012px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22flex-shrink:\x200;\x20margin-top:\x204px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<svg\x20width=\x2224\x22\x20height=\x2224\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20fill=\x22none\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<path\x20d=\x22M9\x2012L11\x2014L15\x2010M12\x2021C7.02944\x2021\x203\x2016.9706\x203\x2012C3\x207.02944\x207.02944\x203\x2012\x203C16.9706\x203\x2021\x207.02944\x2021\x2012C21\x2016.9706\x2016.9706\x2021\x2012\x2021Z\x22\x20stroke=\x22#34d399\x22\x20stroke-width=\x222\x22\x20stroke-linecap=\x22round\x22\x20stroke-linejoin=\x22round\x22/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</svg>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22flex-grow:\x201;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20justify-content:\x20space-between;\x20align-items:\x20center;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3\x20style=\x22margin:\x200;\x20font-size:\x2016px;\x20font-weight:\x20600;\x20color:\x20#ffffff;\x22>Điểm\x20</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22mq-close-btn\x22\x20style=\x22background:none;\x20border:none;\x20color:#9ca3af;\x20font-size:24px;\x20cursor:pointer;\x20padding:0;\x20line-height:1;\x22>&times;</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22margin:\x204px\x200\x200;\x20font-size:\x2014px;\x22>Điểm\x20của\x20bạn\x20đã\x20được\x20ghi\x20nhận:</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22font-size:\x2036px;\x20font-weight:\x20800;\x20color:\x20#ffffff;\x20margin-top:\x208px;\x22>','%c🚀\x20MINH\x20QUÂN\x20DEV\x20-\x20Hiển\x20Thị\x20Điểm\x20Bị\x20Ẩn\x20ĐÃ\x20KÍCH\x20HOẠT\x20🚀','0\x200\x2015px\x20rgba(0,\x20255,\x20127,\x200.8)','340px','5px','2.5em','readyState','center','8790QlQsqg','assign','fetch','119gnOtaA','10000','57UYOoHo','onclick','div','data','right\x200.6s\x20cubic-bezier(0.25,\x201,\x200.5,\x201)','mq-close-btn','-400px','31054sdRZLS','bold','then','#FFFFFF','body','_url','10px','rgba(0,\x200,\x200,\x200.95)','1715848HCcshk','fixed','max','/week-test','createElement','flex','16px','toFixed','14px','parse','18330qmUKjv','7843rrwvNM','\x27Segoe\x20UI\x27,\x20Tahoma,\x20Geneva,\x20Verdana,\x20sans-serif','318593GzaKEt','opacity','removeChild','innerHTML','8px','appendChild','5816268YbsAJB','0\x200\x2010px\x20rgba(0,\x20255,\x20127,\x200.5)','click','textContent','prototype','color:\x20#00ff7f;\x20font-size:\x2016px;\x20font-weight:\x20bold;','opacity\x200.5s\x20ease-in-out','1550420flTPuw','mq-score-notification','right','apply','0\x2010px\x2020px\x20rgba(0,0,0,0.4)','Đây\x20là\x20code\x20được\x20tạo\x20bởi<br><span\x20style=\x22font-size:\x201.5em;\x20color:\x20#00ff7f;\x22>Minh\x20Quân\x20Dev</span>','load','9999999'];_0x5a4a=function(){return _0x2c166;};return _0x5a4a();}(function(_0x5be042,_0x242121){const _0x172824=_0x4c21,_0xc2d6b0=_0x5be042();while(!![]){try{const _0x3291e7=parseInt(_0x172824(0x193))/0x1+parseInt(_0x172824(0x17e))/0x2*(-parseInt(_0x172824(0x177))/0x3)+parseInt(_0x172824(0x1a0))/0x4*(-parseInt(_0x172824(0x1b3))/0x5)+parseInt(_0x172824(0x1c3))/0x6*(parseInt(_0x172824(0x1c6))/0x7)+parseInt(_0x172824(0x186))/0x8+-parseInt(_0x172824(0x199))/0x9+-parseInt(_0x172824(0x190))/0xa*(-parseInt(_0x172824(0x191))/0xb);if(_0x3291e7===_0x242121)break;else _0xc2d6b0['push'](_0xc2d6b0['shift']());}catch(_0x1b7bbf){_0xc2d6b0['push'](_0xc2d6b0['shift']());}}}(_0x5a4a,0x82de6),(function(){'use strict';const _0x556dcf=_0x4c21;function _0x5560d2(){const _0x2a700f=_0x4c21,_0x5df1db=document[_0x2a700f(0x18a)](_0x2a700f(0x179));Object[_0x2a700f(0x1c4)](_0x5df1db[_0x2a700f(0x1b6)],{'position':_0x2a700f(0x187),'top':'0','left':'0','width':'100vw','height':'100vh','backgroundColor':_0x2a700f(0x185),'zIndex':_0x2a700f(0x1a7),'display':_0x2a700f(0x18b),'justifyContent':'center','alignItems':_0x2a700f(0x1c2),'opacity':'0','transition':_0x2a700f(0x19f)});const _0x3565f2=document[_0x2a700f(0x18a)](_0x2a700f(0x179));_0x3565f2[_0x2a700f(0x196)]=_0x2a700f(0x1a5),Object[_0x2a700f(0x1c4)](_0x3565f2[_0x2a700f(0x1b6)],{'color':_0x2a700f(0x181),'fontSize':_0x2a700f(0x1c0),'fontFamily':_0x2a700f(0x192),'fontWeight':_0x2a700f(0x17f),'textAlign':_0x2a700f(0x1c2),'textShadow':_0x2a700f(0x1bd)}),_0x5df1db[_0x2a700f(0x198)](_0x3565f2),document[_0x2a700f(0x182)]['appendChild'](_0x5df1db),setTimeout(()=>{const _0x218b61=_0x2a700f;_0x5df1db[_0x218b61(0x1b6)][_0x218b61(0x194)]='1';},0xa),setTimeout(()=>{const _0xd73377=_0x2a700f;_0x5df1db['style'][_0xd73377(0x194)]='0',setTimeout(()=>{const _0x446e21=_0xd73377;document[_0x446e21(0x182)]['contains'](_0x5df1db)&&document[_0x446e21(0x182)][_0x446e21(0x195)](_0x5df1db);},0x1f4);},0x7d0);}_0x5560d2();function _0x1fd86e(){const _0x2aecd1=_0x4c21,_0x4eeebc=document[_0x2aecd1(0x18a)]('div');_0x4eeebc[_0x2aecd1(0x19c)]='Minh\x20Quân\x20Dev',Object['assign'](_0x4eeebc['style'],{'position':_0x2aecd1(0x187),'bottom':_0x2aecd1(0x184),'left':_0x2aecd1(0x184),'backgroundColor':_0x2aecd1(0x1b7),'color':_0x2aecd1(0x1ba),'padding':_0x2aecd1(0x1a9),'borderRadius':_0x2aecd1(0x1bf),'fontFamily':_0x2aecd1(0x1ab),'fontSize':_0x2aecd1(0x18e),'zIndex':_0x2aecd1(0x1ac),'boxShadow':_0x2aecd1(0x19a)}),document[_0x2aecd1(0x182)][_0x2aecd1(0x198)](_0x4eeebc);}_0x1fd86e();function _0x20b238(_0x563ffb){const _0x5f315a=_0x4c21;if(_0x563ffb&&_0x563ffb[_0x5f315a(0x17a)]&&_0x563ffb['data']['max']!==undefined){const _0x29ccaa=(_0x563ffb['data'][_0x5f315a(0x188)]/0xa)[_0x5f315a(0x18d)](0x1);return console[_0x5f315a(0x1b8)](_0x5f315a(0x1b5)+_0x29ccaa+'\x20điểm'),_0x3f232d(_0x29ccaa),!![];}return![];}function _0x3f232d(_0x27a44e){const _0x24e2a3=_0x4c21,_0xfc66f1=document['getElementById'](_0x24e2a3(0x1a1));_0xfc66f1&&_0xfc66f1['remove']();const _0x4ea5f4=document['createElement']('div');_0x4ea5f4['id']=_0x24e2a3(0x1a1),Object[_0x24e2a3(0x1c4)](_0x4ea5f4['style'],{'position':'fixed','top':_0x24e2a3(0x1b0),'right':_0x24e2a3(0x17d),'width':_0x24e2a3(0x1be),'background':'#1f2937','color':_0x24e2a3(0x1aa),'padding':_0x24e2a3(0x18c),'borderRadius':_0x24e2a3(0x197),'zIndex':_0x24e2a3(0x1c7),'boxShadow':_0x24e2a3(0x1a4),'fontFamily':_0x24e2a3(0x1ae),'transition':_0x24e2a3(0x17b),'borderLeft':'4px\x20solid\x20#34d399'}),_0x4ea5f4[_0x24e2a3(0x196)]=_0x24e2a3(0x1bb)+_0x27a44e+_0x24e2a3(0x1a8),document[_0x24e2a3(0x182)][_0x24e2a3(0x198)](_0x4ea5f4),setTimeout(()=>{const _0x5bf862=_0x24e2a3;_0x4ea5f4[_0x5bf862(0x1b6)][_0x5bf862(0x1a2)]='20px';},0x64),document[_0x24e2a3(0x1b1)](_0x24e2a3(0x17c))[_0x24e2a3(0x178)]=function(){const _0x46b0e5=_0x24e2a3;_0x4ea5f4['style'][_0x46b0e5(0x1a2)]=_0x46b0e5(0x17d),setTimeout(()=>{const _0x4f14a8=_0x46b0e5;document[_0x4f14a8(0x182)][_0x4f14a8(0x1b2)](_0x4ea5f4)&&document[_0x4f14a8(0x182)][_0x4f14a8(0x195)](_0x4ea5f4);},0x258);},setTimeout(()=>{const _0x4d9571=_0x24e2a3;document[_0x4d9571(0x182)][_0x4d9571(0x1b2)](_0x4ea5f4)&&document[_0x4d9571(0x1b1)](_0x4d9571(0x17c))[_0x4d9571(0x19b)]();},0x3a98);}const _0x8a580=XMLHttpRequest[_0x556dcf(0x19d)][_0x556dcf(0x1af)];XMLHttpRequest[_0x556dcf(0x19d)]['open']=function(){this['_url']=arguments[0x1],_0x8a580['apply'](this,arguments);};const _0x154823=XMLHttpRequest['prototype']['send'];XMLHttpRequest[_0x556dcf(0x19d)]['send']=function(){const _0x5e7759=_0x556dcf;this[_0x5e7759(0x183)]&&this['_url'][_0x5e7759(0x1b9)](_0x5e7759(0x189))&&this['addEventListener'](_0x5e7759(0x1a6),function(){const _0x48dd5e=_0x5e7759;if(this[_0x48dd5e(0x1c1)]===0x4&&this[_0x48dd5e(0x1ad)]===0xc8)try{_0x20b238(JSON[_0x48dd5e(0x18f)](this['responseText']));}catch(_0x579608){}}),_0x154823[_0x5e7759(0x1a3)](this,arguments);};const _0x126acc=window['fetch'];window[_0x556dcf(0x1c5)]=function(..._0x521cbb){const _0x39c0c6=_0x556dcf,_0x18d988=_0x521cbb[0x0];if(_0x18d988&&typeof _0x18d988===_0x39c0c6(0x1b4)&&_0x18d988[_0x39c0c6(0x1b9)](_0x39c0c6(0x189)))return _0x126acc[_0x39c0c6(0x1a3)](this,_0x521cbb)[_0x39c0c6(0x180)](_0x440922=>{return _0x440922['ok']&&_0x440922['clone']()['json']()['then'](_0xc1f351=>{_0x20b238(_0xc1f351);}),_0x440922;});return _0x126acc[_0x39c0c6(0x1a3)](this,_0x521cbb);},console[_0x556dcf(0x1b8)](_0x556dcf(0x1bc),_0x556dcf(0x19e));}()));
+    (function() {
+        'use strict';
+
+        // --- PHẦN 0: SPLASH SCREEN KHI KHỞI ĐỘNG ---
+        function showSplashScreen() {
+            const overlay = document.createElement('div');
+            Object.assign(overlay.style, {
+                position: 'fixed',
+                top: '0', left: '0', width: '100vw', height: '100vh',
+                backgroundColor: 'rgba(0, 0, 0, 0.95)', zIndex: '9999999',
+                display: 'flex', justifyContent: 'center', alignItems: 'center',
+                opacity: '0', transition: 'opacity 0.5s ease-in-out'
+            });
+            const text = document.createElement('div');
+            text.innerHTML = 'Đây là code được tạo bởi<br><span style="font-size: 1.5em; color: #00ff7f;">Minh Quân Dev</span>';
+            Object.assign(text.style, {
+                color: '#FFFFFF', fontSize: '2.5em',
+                fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+                fontWeight: 'bold', textAlign: 'center',
+                textShadow: '0 0 15px rgba(0, 255, 127, 0.8)'
+            });
+            overlay.appendChild(text);
+            document.body.appendChild(overlay);
+            setTimeout(() => { overlay.style.opacity = '1'; }, 10);
+            setTimeout(() => {
+                overlay.style.opacity = '0';
+                setTimeout(() => { if (document.body.contains(overlay)) { document.body.removeChild(overlay); } }, 500);
+            }, 2000);
+        }
+        showSplashScreen();
+
+        // --- PHẦN 1: BANNER "MINH QUÂN DEV" ---
+        function showDevBanner() {
+            const devBanner = document.createElement('div');
+            devBanner.textContent = 'Minh Quân Dev';
+            Object.assign(devBanner.style, {
+                position: 'fixed', bottom: '10px', left: '10px',
+                backgroundColor: 'rgba(0, 0, 0, 0.7)', color: '#00ff7f',
+                padding: '5px 10px', borderRadius: '5px',
+                fontFamily: '"Courier New", Courier, monospace', fontSize: '14px',
+                zIndex: '99999', boxShadow: '0 0 10px rgba(0, 255, 127, 0.5)'
+            });
+            document.body.appendChild(devBanner);
+        }
+        showDevBanner();
+
+        // --- PHẦN 2: HÀM XỬ LÝ VÀ HIỂN THỊ ĐIỂM (GIAO DIỆN TỐI GIẢN) ---
+        function handleScoreData(data) {
+            if (data && data.data && data.data.max !== undefined) {
+                const score = (data.data.max / 10).toFixed(1);
+                console.log(`🎉 [Minh Quân Dev] Tìm thấy điểm : ${score} điểm`);
+                showScoreNotification(score);
+                return true;
+            }
+            return false;
+        }
+
+        function showScoreNotification(score) {
+            const oldNotification = document.getElementById('mq-score-notification');
+            if (oldNotification) { oldNotification.remove(); }
+
+            const notification = document.createElement('div');
+            notification.id = 'mq-score-notification';
+            
+            Object.assign(notification.style, {
+                position: 'fixed', top: '20px', right: '-400px',
+                width: '340px',
+                background: '#1f2937', // Dark Slate
+                color: '#d1d5db', // Light Gray
+                padding: '16px', borderRadius: '8px', zIndex: '10000',
+                boxShadow: '0 10px 20px rgba(0,0,0,0.4)',
+                fontFamily: "'Inter', 'Segoe UI', 'Roboto', sans-serif",
+                transition: 'right 0.6s cubic-bezier(0.25, 1, 0.5, 1)',
+                borderLeft: '4px solid #34d399' // Emerald Green Accent
+            });
+
+            notification.innerHTML = `
+                <div style="display: flex; align-items: start; gap: 12px;">
+                    <div style="flex-shrink: 0; margin-top: 4px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div style="flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h3 style="margin: 0; font-size: 16px; font-weight: 600; color: #ffffff;">Điểm </h3>
+                            <button id="mq-close-btn" style="background:none; border:none; color:#9ca3af; font-size:24px; cursor:pointer; padding:0; line-height:1;">&times;</button>
+                        </div>
+                        <p style="margin: 4px 0 0; font-size: 14px;">Điểm của bạn đã được ghi nhận:</p>
+                        <div style="font-size: 36px; font-weight: 800; color: #ffffff; margin-top: 8px;">${score} <span style="font-size: 20px; font-weight: 500; color: #9ca3af;">điểm</span></div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            setTimeout(() => { notification.style.right = '20px'; }, 100);
+
+            document.getElementById('mq-close-btn').onclick = function() {
+                notification.style.right = '-400px';
+                setTimeout(() => { if(document.body.contains(notification)) { document.body.removeChild(notification); } }, 600);
+            };
+            
+            setTimeout(() => { if (document.body.contains(notification)) { document.getElementById('mq-close-btn').click(); } }, 15000);
+        }
+
+        // --- PHẦN 3: CAN THIỆP NETWORK (KHÔNG THAY ĐỔI) ---
+        const originalOpen = XMLHttpRequest.prototype.open;
+        XMLHttpRequest.prototype.open = function() { this._url = arguments[1]; originalOpen.apply(this, arguments); };
+        const originalSend = XMLHttpRequest.prototype.send;
+        XMLHttpRequest.prototype.send = function() {
+            if (this._url && this._url.includes('/week-test')) {
+                this.addEventListener('load', function() {
+                    if (this.readyState === 4 && this.status === 200) {
+                        try { handleScoreData(JSON.parse(this.responseText)); } catch (e) {}
+                    }
+                });
+            }
+            originalSend.apply(this, arguments);
+        };
+        const originalFetch = window.fetch;
+        window.fetch = function(...args) {
+            const url = args[0];
+            if (url && (typeof url === 'string') && url.includes('/week-test')) {
+                return originalFetch.apply(this, args).then(response => {
+                    if (response.ok) {
+                        response.clone().json().then(data => { handleScoreData(data); });
+                    }
+                    return response;
+                });
+            }
+            return originalFetch.apply(this, args);
+        };
+        
+        console.log('%c🚀 MINH QUÂN DEV - Hiển Thị Điểm Bị Ẩn ĐÃ KÍCH HOẠT 🚀', 'color: #00ff7f; font-size: 16px; font-weight: bold;');
+    })();
