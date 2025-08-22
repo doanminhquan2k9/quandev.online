@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem Điểm Ẩn LMS ICTU - Minh Quân Dev 06</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --accent: #fd79a8;
+            --dark: #2d3436;
+            --light: #dfe6e9;
+            --success: #00b894;
+            --warning: #fdcb6e;
+            --info: #0984e3;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--info) 100%);
+            color: var(--dark);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            max-width: 400px;
+            animation: slideIn 0.5s ease-out;
+            border-left: 5px solid var(--accent);
+        }
+        
+        .notification i {
+            color: var(--accent);
+            font-size: 24px;
+            margin-right: 15px;
+        }
+        
+        .notification-content {
+            flex: 1;
+        }
+        
+        .notification-close {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: var(--dark);
+            margin-left: 10px;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .dev-badge {
+            display: inline-block;
+            background: var(--accent);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .student-badge {
+            display: inline-block;
+            background: var(--warning);
+            color: var(--dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 5px;
+            font-size: 0.8rem;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            width: 90%;
+            max-width: 900px;
+            padding: 30px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--info));
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin: 20px 0 15px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .highlight {
+            background-color: #f0f7ff;
+            padding: 20px;
+            border-left: 4px solid var(--info);
+            border-radius: 8px;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .highlight::after {
+            content: '\f06b';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: var(--info);
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+        
+        .code-container {
+            background-color: #2d3436;
+            color: var(--light);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+            overflow-x: auto;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        
+        .key-form {
+            background: linear-gradient(135deg, #f6f8ff 0%, #edf1ff 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .key-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 20px;
+            border: 2px solid var(--secondary);
+            border-radius: 30px;
+            font-size: 1rem;
+            margin: 15px 0;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .key-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.3);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(108, 92, 231, 0.4);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(108, 92, 231, 0.6);
+        }
+        
+        .submit-btn i {
+            margin-right: 8px;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(108, 92, 231, 0.4);
+        }
+        
+        .copy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(108, 92, 231, 0.6);
+        }
+        
+        .copy-btn i {
+            margin-right: 8px;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 25px 0;
+            gap: 15px;
+        }
+        
+        .feature {
+            flex-basis: 48%;
+            background: linear-gradient(135deg, #f6f8ff 0%, #edf1ff 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0e7ff;
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature h3 i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        .telegram-info {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--info) 0%, #1c7ed6 100%);
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(28, 126, 214, 0.4);
+        }
+        
+        .telegram-info a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+        
+        .telegram-info a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        .instructions {
+            background-color: #fff4e6;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 4px solid var(--warning);
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .feature {
+                flex-basis: 100%;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .notification {
+                top: 10px;
+                right: 10px;
+                left: 10px;
+                max-width: none;
+            }
+        }
+        
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: 'Fira Code', monospace;
+            line-height: 1.5;
+        }
+        
+        .code-comment {
+            color: #6c757d;
+            font-style: italic;
+        }
+        
+        .code-keyword {
+            color: #fd79a8;
+        }
+        
+        .code-function {
+            color: #74b9ff;
+        }
+        
+        .code-string {
+            color: #00b894;
+        }
+        
+        .disclaimer {
+            background-color: #ffeaa7;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--warning);
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            margin-top: 10px;
+            font-weight: bold;
+            display: none;
+        }
+        
+        .success-message {
+            color: var(--success);
+            margin-top: 10px;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="notification">
+        <i class="fas fa-info-circle"></i>
+        <div class="notification-content">
+            <strong>Thông báo quan trọng</strong>
+            <p>Code này được phát triển bởi học sinh của Minh Quân Dev 06. Tiện ích chỉ dùng để xem điểm từ dữ liệu JSON, không liên quan đến bảo mật LMS.</p>
+        </div>
+        <button class="notification-close" onclick="closeNotification()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <div class="header">
+        <h1>Xem Điểm Ẩn LMS ICTU</h1>
+        <p>Công cụ hỗ trợ sinh viên ICTU xem điểm chi tiết</p>
+        <div class="dev-badge">Phát triển bởi Minh Quân Dev 06</div>
+        <div class="student-badge">CODE ĐƯỢC VIẾT BỞI MINH QUÂN 2006</div>
+    </div>
+    
+    <div class="container">
+        <div class="highlight">
+            <p>Công cụ này giúp sinh viên Đại học Công nghệ Thông tin và Truyền thông Thái Nguyên (ICTU) xem các điểm ẩn trên hệ thống LMS một cách dễ dàng và nhanh chóng.</p>
+        </div>
+        
+        <div class="disclaimer">
+            <p><strong>Lưu ý quan trọng:</strong> Tiện ích này được tạo ra để chỉ check xem điểm các lần làm bài từ dữ liệu JSON, không liên quan đến vấn đề bảo mật LMS. Xin cảm ơn!</p>
+        </div>
+        
+        <h2><i class="fas fa-info-circle"></i> Giới thiệu</h2>
+        <p>Hệ thống LMS (Learning Management System) của trường Đại học Công nghệ Thông tin và Truyền thông Thái Nguyên là nền tảng quan trọng giúp sinh viên theo dõi kết quả học tập, điểm số và các thông tin học thuật khác.</p>
+        
+        <p>Tuy nhiên, một số điểm số có thể không hiển thị công khai hoặc khó tìm thấy trên giao diện thông thường. Code này được phát triển để giúp sinh viên có thể xem được tất cả các điểm ẩn một cách dễ dàng.</p>
+        
+        <h2><i class="fas fa-star"></i> Tính năng nổi bật</h2>
+        <div class="features">
+            <div class="feature">
+                <h3><i class="fas fa-eye"></i> Xem điểm ẩn</h3>
+                <p>Hiển thị tất cả các điểm số bao gồm cả những điểm không hiển thị trên giao diện thông thường.</p>
+            </div>
+            <div class="feature">
+                <h3><i class="fas fa-paint-brush"></i> Giao diện hiện đại</h3>
+                <p>Thiết kế tối ưu, thân thiện với người dùng, tương thích với mọi thiết bị.</p>
+            </div>
+            <div class="feature">
+                <h3><i class="fas fa-shield-alt"></i> An toàn dữ liệu</h3>
+                <p>Chỉ đọc dữ liệu từ file JSON, không can thiệp vào hệ thống LMS.</p>
+            </div>
+            <div class="feature">
+                <h3><i class="fas fa-gift"></i> Hoàn toàn miễn phí</h3>
+                <p>Công cụ được cung cấp miễn phí để hỗ trợ sinh viên ICTU.</p>
+            </div>
+        </div>
+        
+        <h2><i class="fas fa-key"></i> Nhập mã key để xem code</h2>
+        <div class="key-form">
+            <p>Vui lòng nhập mã key để xem mã code. Nếu chưa có key, hãy tham gia nhóm Telegram để nhận key.</p>
+            <input type="text" class="key-input" id="keyInput" placeholder="Nhập mã key ở đây...">
+            <button class="submit-btn" onclick="checkKey()"><i class="fas fa-unlock"></i> Xem code</button>
+            <div class="error-message" id="errorMessage">Mã key không đúng. Vui lòng thử lại.</div>
+            <div class="success-message" id="successMessage">Key chính xác! Đang chuyển hướng...</div>
+        </div>
+        
+        <h2><i class="fas fa-code"></i> Mã code</h2>
+        <div class="code-container" id="codeContainer">
+            <button class="copy-btn" onclick="copyCode()"><i class="fas fa-copy"></i> Sao chép code</button>
+            <pre><code>hi</code></pre>
+        </div>
+        
+        <h2><i class="fas fa-book"></i> Hướng dẫn sử dụng</h2>
+        <div class="instructions">
+            <p>Để sử dụng công cụ này, bạn cần làm theo các bước sau:</p>
+            <ol>
+                <li>Sao chép mã code bên trên (sau khi nhập key)</li>
+                <li>Lưu mã code vào một file HTML (ví dụ: diem.html)</li>
+                <li>Mở file bằng trình duyệt web</li>
+                <li>Mở Developer Tools (F12) và xem kết quả trong Console</li>
+                <li>Xem kết quả điểm chi tiết từ dữ liệu trực tuyến</li>
+            </ol>
+        </div>
+        
+        <div class="telegram-info">
+            <p>Tham gia nhóm Telegram để nhận mã key và cập nhật thông tin mới nhất:</p>
+            <a href="https://t.me/lmsictu_news" target="_blank"><i class="fab fa-telegram"></i> t.me/lmsictu_news</a>
+            <p style="margin-top: 15px;">Mã key: <strong>Vui Lòng Truy Cập Telegram Box Để Lấy </strong></p>
+        </div>
+        
+        <div class="highlight">
+            <p><strong>Lưu ý:</strong> Code này chỉ đọc dữ liệu từ URL và hiển thị thông tin điểm. Không có can thiệp nào vào hệ thống LMS của trường.</p>
+        </div>
+        
+        <p>Chúc bạn đạt được kết quả học tập tốt và sử dụng công cụ này hiệu quả!</p>
+    </div>
+    
+    <footer>
+        <div class="logo">MINH QUÂN DEV 06</div>
+        <p>© 2023 - Công cụ hỗ trợ sinh viên ICTU | Đại học Công nghệ Thông tin và Truyền thông Thái Nguyên</p>
+        <p>CODE ĐƯỢC VIẾT BỞI MINH QUÂN 2006</p>
+    </footer>
+
+    <script>
+        function closeNotification() {
+            document.querySelector('.notification').style.display = 'none';
+        }
+        
+        function checkKey() {
+            const keyInput = document.getElementById('keyInput');
+            const errorMessage = document.getElementById('errorMessage');
+            const successMessage = document.getElementById('successMessage');
+            
+            if (keyInput.value === 'diemminhquan') {
+                errorMessage.style.display = 'none';
+                successMessage.style.display = 'block';
+                
+                // Chuyển hướng sau 2 giây
+                setTimeout(() => {
+                    window.location.href = 'https://quandev.online/diem/diem.txt';
+                }, 2000);
+            } else {
+                errorMessage.style.display = 'block';
+                successMessage.style.display = 'none';
+                
+                // Hiệu ứng lỗi
+                keyInput.style.borderColor = '#e74c3c';
+                setTimeout(() => {
+                    keyInput.style.borderColor = '';
+                }, 1000);
+            }
+        }
+        
+        function copyCode() {
+            const codeElement = document.querySelector('pre code');
+            const textArea = document.createElement('textarea');
+            textArea.value = codeElement.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            const button = document.querySelector('.copy-btn');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i> Đã sao chép!';
+            button.style.background = 'linear-gradient(to right, var(--success), var(--info))';
+            
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.style.background = 'linear-gradient(to right, var(--primary), var(--accent))';
+            }, 2000);
+        }
+        
+        // Tự động đóng thông báo sau 10 giây
+        setTimeout(closeNotification, 10000);
+        
+        // Cho phép nhấn Enter để submit key
+        document.getElementById('keyInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkKey();
+            }
+        });
+    </script>
+</body>
+</html>
